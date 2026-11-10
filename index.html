@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#343b4a">
+<meta name="description" content="Discover and watch videos on SmartLensLK Stream.">
+<title>SmartLensLK Stream</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css"><script src="assets/config.js"></script>
+</head>
+<body class="public-body">
+<header class="yt-header">
+  <div class="header-left">
+    <button class="round-icon menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+    <a class="brand yt-brand" href="./"><span class="brand-mark">▶</span><span>MY LIVE <b>STREAMING</b><small>LK</small></span></a>
+  </div>
+  <div class="yt-search"><input id="searchInput" type="search" placeholder="Search videos" autocomplete="off"><button id="searchSubmit" aria-label="Search">⌕</button></div>
+  <div class="header-right"><span class="live-status"><i></i> STREAM LIBRARY</span><button class="mobile-search-btn" id="searchFocus" aria-label="Open search">⌕</button></div>
+</header>
+
+<aside class="yt-sidebar" id="sidebar">
+  <a class="side-link active" href="#home"><span>⌂</span>Home</a>
+  <a class="side-link" href="#library"><span>▤</span>Explore</a>
+  <a class="side-link" href="#library"><span>▣</span>All videos</a>
+  <div class="side-divider"></div>
+  <div class="side-caption">YOUR STREAMING SPACE</div>
+  <div class="side-note"><span class="side-note-icon">▶</span><p>Discover videos selected for your entertainment.</p></div>
+  <div class="side-footer">© <span id="year"></span> MY LIVE STREAMING</div>
+</aside>
+
+<main class="yt-main" id="home">
+  <section class="welcome-banner">
+    <div><span class="banner-kicker">WELCOME TO YOUR STREAM</span><h1>Watch. Enjoy. <em>Repeat.</em></h1><p>Your favourite videos, all in one place.</p></div>
+    <div class="banner-symbol">▶</div>
+  </section>
+  <section class="library-section" id="library">
+    <div class="category-bar"><button class="category-chip active" data-filter="all">All</button><button class="category-chip" data-filter="latest">Latest videos</button><button class="category-chip" data-filter="featured">Discover</button></div>
+    <div class="library-heading"><div><h2>Recommended videos</h2><p id="status">Loading videos…</p></div><span class="heading-mark">● LIVE LIBRARY</span></div>
+    <div id="videoGrid" class="video-grid"></div>
+  </section>
+  <footer class="yt-footer"><span>MY LIVE STREAMING</span><span>Videos for every moment.</span></footer>
+</main>
+
+<div class="modal" id="playerModal" aria-hidden="true"><div class="modal-backdrop" data-close></div><div class="player-dialog"><button class="close-btn" data-close aria-label="Close">✕</button><div class="player-frame" id="playerFrame"></div><div class="player-info"><span class="eyebrow">NOW PLAYING</span><h2 id="playerTitle"></h2><p id="playerDescription"></p></div></div></div>
+<script src="assets/app.js"></script>
+</body></html>

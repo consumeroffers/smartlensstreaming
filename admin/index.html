@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>Admin · SmartLensLK Stream</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css"><script src="../assets/config.js"></script></head>
+<body class="admin-body"><header class="topbar admin-topbar"><a class="brand" href="../"><span class="brand-mark">S</span><span>SmartLens<span class="accent">LK</span></span></a><span class="admin-label">CONTROL CENTER</span><a class="nav-link" href="../">← View website</a></header>
+<main class="admin-main"><section id="loginPanel" class="login-panel"><span class="eyebrow">RESTRICTED ACCESS</span><h1>Welcome <span class="gradient-text">back.</span></h1><p class="muted">Sign in to manage your streaming library.</p>
+<form id="loginForm" class="admin-form"><label>Username<input id="username" required autocomplete="username"></label><label>Password<input id="password" type="password" required autocomplete="current-password"></label><button class="primary-btn full-btn" type="submit">Sign in securely <span>→</span></button><p id="loginError" class="form-error"></p></form></section>
+<section id="dashboard" hidden><div class="dashboard-head"><div><span class="eyebrow">OVERVIEW</span><h1>Content <span class="gradient-text">studio.</span></h1><p class="muted">Manage every title in your library.</p></div><button id="logoutBtn" class="secondary-btn">Sign out ↗</button></div>
+<div class="stats-row"><div class="stat-card"><span>TOTAL VIDEOS</span><strong id="totalCount">0</strong></div><div class="stat-card"><span>PUBLISHED</span><strong id="publishedCount">0</strong></div><div class="stat-card"><span>UNPUBLISHED</span><strong id="draftCount">0</strong></div></div>
+<div class="admin-content"><div class="editor-card"><div class="editor-heading"><div><span class="eyebrow">CONTENT MANAGER</span><h2 id="formHeading">Add a video</h2></div><span class="editor-icon">＋</span></div>
+<form id="videoForm" class="admin-form"><input id="videoId" type="hidden"><label>Video title<input id="title" maxlength="180" placeholder="Give your video a title" required></label>
+<label>Thumbnail image URL<input id="thumbnail" type="url" placeholder="https://example.com/thumbnail.jpg" required></label>
+<label>Video embedded code<textarea id="embedCode" rows="4" placeholder='<iframe src="https://www.youtube.com/embed/VIDEO_ID" ...></iframe>' required></textarea><small>Paste an iframe embed snippet from a supported video provider.</small></label>
+<label>Description <span class="optional">(optional)</span><textarea id="description" rows="3" maxlength="5000" placeholder="Tell viewers what this video is about…"></textarea></label>
+<label class="check-label"><input id="published" type="checkbox" checked><span>Publish immediately</span></label>
+<div class="form-actions"><button class="primary-btn" type="submit" id="saveBtn">Save video <span>→</span></button><button class="secondary-btn" type="button" id="cancelEdit" hidden>Cancel</button></div><p id="formMessage" class="form-message"></p></form></div>
+<div class="table-card"><div class="table-heading"><div><span class="eyebrow">YOUR LIBRARY</span><h2>All videos</h2></div><button id="refreshBtn" class="secondary-btn">↻ Refresh</button></div><div id="adminVideoList" class="admin-video-list"></div></div></div>
+</section></main><div id="toast" class="toast"></div><script src="admin.js"></script></body></html>
